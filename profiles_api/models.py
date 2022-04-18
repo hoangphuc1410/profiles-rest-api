@@ -40,7 +40,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     objects = UserProfileManager()
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'email' #Login in admin
     REQUIRED_FIELDS = ['name']
 
     def get_full_name(self):
