@@ -67,7 +67,7 @@ class HelloViewSet(viewsets.ViewSet):
         ]
         return Response({'message': 'Hello!', 'a_viewset': a_viewset})
 
-    def create(self,request):
+    def create(self, request):
         """Create a new hello message"""
         serializer = self.serializer_class(data=request.data)
 
@@ -119,7 +119,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     queryset = models.ProfileFeedItem.objects.all()
     permission_classes = (
-        permissions.UpdateOwnStatus,IsAuthenticated)
+        permissions.UpdateOwnStatus, IsAuthenticated)
 
     def perform_create(self, serializer):
         """Sets the user profile to the logged-in user"""

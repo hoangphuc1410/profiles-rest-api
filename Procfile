@@ -1,0 +1,1 @@
+wed: gunicorn profiles_project.wsgi
