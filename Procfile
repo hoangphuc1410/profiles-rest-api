@@ -1,1 +1,1 @@
-wed: gunicorn profiles_project.wsgi
+wed: gunicorn profiles_api.wsgi
